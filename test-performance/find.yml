@@ -1,0 +1,10 @@
+config:
+  target: "http://localhost:4000"
+  phases:
+    - duration: 2
+      arrivalRate: 100
+      name: "find data"
+scenarios:
+  - flow:
+    - get:
+        url: "/data"

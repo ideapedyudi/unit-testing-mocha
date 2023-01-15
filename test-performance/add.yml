@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:4000"
+  phases:
+    - duration: 2
+      arrivalRate: 100
+      name: "add data"
+scenarios:
+  - flow:
+    - post:
+        url: "/add"
+        json:
+          name: "caca"
+          age: 18

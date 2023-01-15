@@ -19,7 +19,7 @@ const MyModel = mongoose.model('users', mySchema)
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.json("connected")
+    res.send("oke");
 })
 
 app.get('/data', (req, res) => {

@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:4000"
+  phases:
+    - duration: 2
+      arrivalRate: 100
+      name: "delete data"
+scenarios:
+  - flow:
+    - delete:
+        url: "/delete/63c3fec73c7437b96facf6b4"
+        json:
+          name: "caca tayo"
+          age: 18
