@@ -5,7 +5,7 @@ const app = require('../index');
 chai.should();
 chai.use(chaiHttp);
 
-describe('API endpoint test add', () => {
+describe('API endpoint test edit', () => {
     it('should update an item on /edit/:id PUT', (done) => {
         const item = {
             name: 'caca tayo',
