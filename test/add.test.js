@@ -17,8 +17,8 @@ describe('API endpoint test add', () => {
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('object');
-                res.body.should.have.property('name');
-                res.body.should.have.property('age');
+                res.body.should.have.property('name').eql('caca');
+                res.body.should.have.property('age').eql(18);
                 done();
             });
     });
