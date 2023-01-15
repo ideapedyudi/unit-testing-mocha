@@ -1,7 +1,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const app = require('./index');
+const app = require('../index');
 
+chai.should();
 chai.use(chaiHttp);
 
 describe('API endpoint test', () => {
