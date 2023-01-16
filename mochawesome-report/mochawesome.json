@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 3,
-    "passes": 2,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-01-16T03:43:30.143Z",
-    "end": "2023-01-16T03:43:30.151Z",
-    "duration": 8,
-    "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "failures": 0,
+    "start": "2023-01-16T08:11:45.647Z",
+    "end": "2023-01-16T08:11:45.705Z",
+    "duration": 58,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,112 +18,49 @@
   },
   "results": [
     {
-      "uuid": "48e90e57-78a0-4e15-8c95-a9e39ffc9f62",
+      "uuid": "f6d047ff-c95d-434a-8589-d6349f08dbc9",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\find.test.js",
+      "file": "\\test-endpoint\\find.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "2cf20ce8-ae16-40b1-860a-c95df879b394",
-          "title": "Unit Test Function Validation Object",
-          "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\validation.test.js",
-          "file": "\\test-endpoint\\validation.test.js",
+          "uuid": "0bddbad7-7dc7-4887-a281-88d778e96009",
+          "title": "API endpoint test find",
+          "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\find.test.js",
+          "file": "\\test-endpoint\\find.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should return true if input is the same as the defined ok",
-              "fullTitle": "Unit Test Function Validation Object should return true if input is the same as the defined ok",
+              "title": "should return all data on /data GET",
+              "fullTitle": "API endpoint test find should return all data on /data GET",
               "timedOut": false,
-              "duration": 0,
+              "duration": 45,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const input = {\n    nama: \"tayo\",\n    age: 18\n};\nconst result = checkInput(input);\nexpect(result.nama).to.equal(\"tayo\");",
+              "code": "chai.request(app)\n    .get('/data')\n    .end((err, res) => {\n        res.should.have.status(200);\n        res.body.should.be.a('array');\n        fs.writeFileSync('log.json', JSON.stringify(res.body))\n        done();\n    });",
               "err": {},
-              "uuid": "c2ef7ca8-aab8-49c1-af0e-db4b092ec697",
-              "parentUUID": "2cf20ce8-ae16-40b1-860a-c95df879b394",
+              "uuid": "b533834d-194e-4572-9f56-368c4a9127b3",
+              "parentUUID": "0bddbad7-7dc7-4887-a281-88d778e96009",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c2ef7ca8-aab8-49c1-af0e-db4b092ec697"
+            "b533834d-194e-4572-9f56-368c4a9127b3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 0,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "a9ae58a7-f373-4422-95e6-b3266d7c23af",
-          "title": "Unit Test Function Validation Text",
-          "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\validation.test.js",
-          "file": "\\test-endpoint\\validation.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should return true if input is the same as the defined ok",
-              "fullTitle": "Unit Test Function Validation Text should return true if input is the same as the defined ok",
-              "timedOut": false,
-              "duration": 1,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "const input = \"ok\";\nconst define = \"oke\";\nconst result = checkInputOk(input, define);\nassert.isTrue(result);",
-              "err": {
-                "message": "AssertionError: expected false to be true",
-                "estack": "AssertionError: expected false to be true\n    at Context.<anonymous> (test-endpoint\\validation.test.js:26:16)\n    at process.processImmediate (node:internal/timers:471:21)",
-                "diff": "- false\n+ true\n"
-              },
-              "uuid": "975076c4-a4c0-4a84-82c9-7389d14bc9a8",
-              "parentUUID": "a9ae58a7-f373-4422-95e6-b3266d7c23af",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should return false if input is not the same as the defined ok",
-              "fullTitle": "Unit Test Function Validation Text should return false if input is not the same as the defined ok",
-              "timedOut": false,
-              "duration": 1,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const input = \"ok\";\nconst define = \"oke\";\nconst result = checkInputOk(input, define);\nassert.isFalse(result);",
-              "err": {},
-              "uuid": "9f834e42-31f5-46cb-ad86-73c5ec9cdc86",
-              "parentUUID": "a9ae58a7-f373-4422-95e6-b3266d7c23af",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "9f834e42-31f5-46cb-ad86-73c5ec9cdc86"
-          ],
-          "failures": [
-            "975076c4-a4c0-4a84-82c9-7389d14bc9a8"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 2,
+          "duration": 45,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
