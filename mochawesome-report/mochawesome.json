@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
+    "suites": 2,
+    "tests": 3,
     "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-01-16T02:21:06.533Z",
-    "end": "2023-01-16T02:21:06.538Z",
-    "duration": 5,
-    "testsRegistered": 2,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2023-01-16T03:43:30.143Z",
+    "end": "2023-01-16T03:43:30.151Z",
+    "duration": 8,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,43 +18,25 @@
   },
   "results": [
     {
-      "uuid": "0f79ad9f-ccdc-4f2c-b800-b6aa2103ab3e",
+      "uuid": "48e90e57-78a0-4e15-8c95-a9e39ffc9f62",
       "title": "",
-      "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\conditional.test.js",
-      "file": "\\test-endpoint\\conditional.test.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "8a17db02-9c70-4449-af68-6490a6bc821b",
-          "title": "My Function",
-          "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\conditional.test.js",
-          "file": "\\test-endpoint\\conditional.test.js",
+          "uuid": "2cf20ce8-ae16-40b1-860a-c95df879b394",
+          "title": "Unit Test Function Validation Object",
+          "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\validation.test.js",
+          "file": "\\test-endpoint\\validation.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should return \"Lulus\" if score is above 50",
-              "fullTitle": "My Function should return \"Lulus\" if score is above 50",
-              "timedOut": false,
-              "duration": 1,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const score = 55;\nconst result = checkScore(score);\nassert.equal(result, 'Lulus');",
-              "err": {},
-              "uuid": "c78eaa88-e8de-4d50-b15c-7ed9c9420179",
-              "parentUUID": "8a17db02-9c70-4449-af68-6490a6bc821b",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should return \"Gagal\" if score is below 50",
-              "fullTitle": "My Function should return \"Gagal\" if score is below 50",
+              "title": "should return true if input is the same as the defined ok",
+              "fullTitle": "Unit Test Function Validation Object should return true if input is the same as the defined ok",
               "timedOut": false,
               "duration": 0,
               "state": "passed",
@@ -63,23 +45,85 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const score = 45;\nconst result = checkScore(score);\nassert.equal(result, 'Gagal');",
+              "code": "const input = {\n    nama: \"tayo\",\n    age: 18\n};\nconst result = checkInput(input);\nexpect(result.nama).to.equal(\"tayo\");",
               "err": {},
-              "uuid": "cead9582-13d8-4760-9c1b-5b697fc72106",
-              "parentUUID": "8a17db02-9c70-4449-af68-6490a6bc821b",
+              "uuid": "c2ef7ca8-aab8-49c1-af0e-db4b092ec697",
+              "parentUUID": "2cf20ce8-ae16-40b1-860a-c95df879b394",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c78eaa88-e8de-4d50-b15c-7ed9c9420179",
-            "cead9582-13d8-4760-9c1b-5b697fc72106"
+            "c2ef7ca8-aab8-49c1-af0e-db4b092ec697"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a9ae58a7-f373-4422-95e6-b3266d7c23af",
+          "title": "Unit Test Function Validation Text",
+          "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\validation.test.js",
+          "file": "\\test-endpoint\\validation.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return true if input is the same as the defined ok",
+              "fullTitle": "Unit Test Function Validation Text should return true if input is the same as the defined ok",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const input = \"ok\";\nconst define = \"oke\";\nconst result = checkInputOk(input, define);\nassert.isTrue(result);",
+              "err": {
+                "message": "AssertionError: expected false to be true",
+                "estack": "AssertionError: expected false to be true\n    at Context.<anonymous> (test-endpoint\\validation.test.js:26:16)\n    at process.processImmediate (node:internal/timers:471:21)",
+                "diff": "- false\n+ true\n"
+              },
+              "uuid": "975076c4-a4c0-4a84-82c9-7389d14bc9a8",
+              "parentUUID": "a9ae58a7-f373-4422-95e6-b3266d7c23af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return false if input is not the same as the defined ok",
+              "fullTitle": "Unit Test Function Validation Text should return false if input is not the same as the defined ok",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const input = \"ok\";\nconst define = \"oke\";\nconst result = checkInputOk(input, define);\nassert.isFalse(result);",
+              "err": {},
+              "uuid": "9f834e42-31f5-46cb-ad86-73c5ec9cdc86",
+              "parentUUID": "a9ae58a7-f373-4422-95e6-b3266d7c23af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f834e42-31f5-46cb-ad86-73c5ec9cdc86"
+          ],
+          "failures": [
+            "975076c4-a4c0-4a84-82c9-7389d14bc9a8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
