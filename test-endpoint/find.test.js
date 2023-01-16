@@ -13,7 +13,7 @@ describe('API endpoint test find', () => {
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('array');
-                fs.writeFileSync('log.json', JSON.stringify(res.body))
+                fs.writeFileSync('result/find.json', JSON.stringify(res.body))
                 done();
             });
     });

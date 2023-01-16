@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-01-16T08:11:45.647Z",
-    "end": "2023-01-16T08:11:45.705Z",
-    "duration": 58,
+    "start": "2023-01-16T08:14:44.642Z",
+    "end": "2023-01-16T08:14:44.703Z",
+    "duration": 61,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f6d047ff-c95d-434a-8589-d6349f08dbc9",
+      "uuid": "363d9f21-5296-4df4-bbbf-9f445c22c020",
       "title": "",
       "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\find.test.js",
       "file": "\\test-endpoint\\find.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0bddbad7-7dc7-4887-a281-88d778e96009",
+          "uuid": "37ba3d53-7ef6-47ee-a7e5-7fffc18b431d",
           "title": "API endpoint test find",
           "fullFile": "C:\\labs\\labs_library\\unit-testing-mocha\\test-endpoint\\find.test.js",
           "file": "\\test-endpoint\\find.test.js",
@@ -38,29 +38,29 @@
               "title": "should return all data on /data GET",
               "fullTitle": "API endpoint test find should return all data on /data GET",
               "timedOut": false,
-              "duration": 45,
+              "duration": 43,
               "state": "passed",
               "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "chai.request(app)\n    .get('/data')\n    .end((err, res) => {\n        res.should.have.status(200);\n        res.body.should.be.a('array');\n        fs.writeFileSync('log.json', JSON.stringify(res.body))\n        done();\n    });",
+              "code": "chai.request(app)\n    .get('/data')\n    .end((err, res) => {\n        res.should.have.status(200);\n        res.body.should.be.a('array');\n        fs.writeFileSync('result/find.json', JSON.stringify(res.body))\n        done();\n    });",
               "err": {},
-              "uuid": "b533834d-194e-4572-9f56-368c4a9127b3",
-              "parentUUID": "0bddbad7-7dc7-4887-a281-88d778e96009",
+              "uuid": "90f17ade-3fb6-4e88-a8bb-76c1bb19f37e",
+              "parentUUID": "37ba3d53-7ef6-47ee-a7e5-7fffc18b431d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b533834d-194e-4572-9f56-368c4a9127b3"
+            "90f17ade-3fb6-4e88-a8bb-76c1bb19f37e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 45,
+          "duration": 43,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
