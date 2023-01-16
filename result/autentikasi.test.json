@@ -1,0 +1,156 @@
+{
+    "error": 0,
+    "data": {
+        "data": [
+            {
+                "urls": [],
+                "_id": "63a52a72b750ed5941c446a1",
+                "airport": "TTE",
+                "endpoints": [
+                    {
+                        "_id": "63a52a72b750ed5941c446a2",
+                        "url": "https://tte.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:11:30.940Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52a48b750ed5941c43832",
+                "airport": "TRK",
+                "endpoints": [
+                    {
+                        "_id": "63a52a48b750ed5941c43833",
+                        "url": "https://trk.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:10:48.564Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52a36b750ed5941c4320f",
+                "airport": "SIN",
+                "endpoints": [
+                    {
+                        "_id": "63a52a36b750ed5941c43210",
+                        "url": "http://sinairport.mail2typeb.com/service/fr_integrator/save",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:10:30.155Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52a28b750ed5941c42dd5",
+                "airport": "PKY",
+                "endpoints": [
+                    {
+                        "_id": "63a52a28b750ed5941c42dd6",
+                        "url": "http://ldcs.mail2typeb.com/service/fr_integrator/save",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:10:16.799Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a529b2b750ed5941c405ae",
+                "airport": "LBJ",
+                "endpoints": [
+                    {
+                        "_id": "63a529bdb750ed5941c40999",
+                        "url": "https://lbj.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:08:18.508Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52943b750ed5941c3e13f",
+                "airport": "KDI",
+                "endpoints": [
+                    {
+                        "_id": "63a52943b750ed5941c3e140",
+                        "url": "https://kdi.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:06:27.435Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52912b750ed5941c3d160",
+                "airport": "HKG",
+                "endpoints": [
+                    {
+                        "_id": "63a5292ab750ed5941c3d8d9",
+                        "url": "http://hkairport2.mail2typeb.com/service/fr_integrator/save",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:05:38.574Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52889b750ed5941c3a396",
+                "airport": "BDO",
+                "endpoints": [
+                    {
+                        "_id": "63a52889b750ed5941c3a397",
+                        "url": "https://bdo.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:03:21.347Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a52869b750ed5941c39922",
+                "airport": "AAP",
+                "endpoints": [
+                    {
+                        "_id": "63a52869b750ed5941c39923",
+                        "url": "https://aap.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T04:02:49.618Z",
+                "__v": 0
+            },
+            {
+                "urls": [],
+                "_id": "63a5034026d06b498950b0ac",
+                "airport": "BTH",
+                "endpoints": [
+                    {
+                        "_id": "63a5034026d06b498950b0ad",
+                        "url": "http://pau.imigrasi.go.id/service/fr_integrator/save/bth",
+                        "headers": []
+                    },
+                    {
+                        "_id": "63a528c0b750ed5941c3b5db",
+                        "url": "https://bth.aodb-demo.my.id/service/typeb/queue/fr_integrator",
+                        "headers": []
+                    }
+                ],
+                "createdAt": "2022-12-23T01:24:16.225Z",
+                "__v": 0
+            }
+        ],
+        "total": 25
+    },
+    "message": "",
+    "stack": {},
+    "errorName": ""
+}

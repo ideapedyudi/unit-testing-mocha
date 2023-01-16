@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "report": "npx mochawesome-report-generator test-endpoint/validation.test.js"
+    "mocha": "mocha --reporter mochawesome",
+    "artillery": "artillery run -o output.json"
   },
   "author": "",
   "license": "ISC",
@@ -20,13 +21,9 @@
   },
   "dependencies": {
     "body-parser": "^1.20.1",
-    "chart.js": "^4.1.2",
     "express": "^4.18.2",
-    "highcharts": "^10.3.2",
     "joi": "^17.7.0",
     "loadtest": "^5.2.0",
-    "mochawesome-merge": "^4.2.2",
-    "mochawesome-report-generator": "^6.2.0",
     "mongoose": "^6.8.3"
   }
 }
